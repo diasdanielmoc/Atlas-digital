@@ -1,0 +1,133 @@
+ /* Estilos Globais */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Barra Superior (Consistente entre as páginas) */
+        .top-bar {
+            background-color: #464918;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .top-bar a {
+            color: white;
+            text-decoration: none;
+            margin-right: 25px;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .top-bar a:hover {
+            color: #d1d1d1;
+        }
+
+        /* Título Principal */
+        h1 {
+            text-align: center;
+            margin: 40px 0 30px 0;
+            color: #2c3e50;
+            font-size: 2.5em; /* Ligeiramente menor para títulos longos */
+            padding: 0 20px; /* Para garantir que o título não bata nas bordas em telas pequenas */
+        }
+
+        /* Seção do Mapa Interativo (SVG) */
+        .interactive-map-section {
+            width: 100%; /* Ocupando 100% horizontal */
+            height: 600px; /* Uma altura considerável, você pode ajustar */
+            background-color: #e0e0e0; /* Cor de fundo para o placeholder */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 50px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Estilo para o SVG (quando ele for inserido) */
+        .interactive-map-section svg {
+            width: 100%;
+            height: 100%;
+            display: block; /* Remove espaços extras */
+            max-width: 1200px; /* Pode limitar a largura máxima do SVG */
+            object-fit: contain; /* Ajusta o SVG sem cortar ou distorcer */
+        }
+
+        /* Mensagem Placeholder do SVG */
+        .map-placeholder {
+            color: #666;
+            font-size: 1.5em;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Seção de Informações */
+        .info-section {
+            width: 90%;
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        .info-section h2 {
+            color: #464918;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .interactive-map-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* Garante que o mapa não seja distorcido */
+}
+
+.interactive-map-section div {
+    width: 100%;
+    height: 100%;
+}
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .top-bar {
+                padding: 10px 20px;
+            }
+            .top-bar a {
+                margin-right: 15px;
+                font-size: 1em;
+            }
+            h1 {
+                font-size: 2em;
+                margin: 30px 0 20px 0;
+            }
+            .interactive-map-section {
+                height: 400px; /* Altura menor em telas menores */ 
+            }
+            .info-section {
+                margin: 30px auto;
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+            }
+            .interactive-map-section {
+                height: 300px;
+            }
+            .map-placeholder {
+                font-size: 1.2em;
+            }
+        }
